@@ -42,7 +42,7 @@ os.system("rm -rf "+base_location_gitlab+"/.git/")
 os.system("cp -R "+base_location_bitbucket+"/.git "+base_location_gitlab)
 # os.system("cat "+base_location_gitlab+"/.git/config")
 #====================================
-COMMIT_MESSAGE = "Commiting from Python1"
+COMMIT_MESSAGE = "Commiting from Python1" + os.getenv('BUILD_ID')
 # try:
 #     repo = Repo(base_location_gitlab+"/.git/")
 #     repo.git.add(update=True)
