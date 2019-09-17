@@ -40,7 +40,7 @@ Repo.clone_from("https://"+Bitbucket_Username+":"+Bitbucket_Password+"@"+Bitbuck
 os.system("rm -rf "+base_location_gitlab+"/.git/")
 os.system("cp -R "+base_location_bitbucket+"/.git "+base_location_gitlab)
 #====================================
-COMMIT_MESSAGE = "GitLab Sync from jenkins @" datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p") + os.getenv('BUILD_ID')
+COMMIT_MESSAGE = "GitLab Sync from jenkins @" + datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p") + os.getenv('BUILD_ID')
 
 repo = Repo(base_location_gitlab+"/.git/")
 repo.git.checkout('origin/sync') 
